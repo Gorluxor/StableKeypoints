@@ -4,10 +4,10 @@ import numpy as np
 import argparse
 import torch
 import numpy as np
-from unsupervised_keypoints.optimize_token import load_ldm
-from unsupervised_keypoints.optimize import optimize_embedding
+from stable_kp.optimize_token import load_ldm
+from stable_kp.optimize import optimize_embedding
 
-from unsupervised_keypoints.keypoint_regressor import (
+from stable_kp.keypoint_regressor import (
     find_best_indices,
     precompute_all_keypoints,
     return_regressor,
@@ -15,8 +15,8 @@ from unsupervised_keypoints.keypoint_regressor import (
     return_regressor_human36m,
 )
 
-from unsupervised_keypoints.eval import evaluate
-from unsupervised_keypoints.visualize import visualize_attn_maps
+from stable_kp.eval import evaluate
+from stable_kp.visualize import visualize_attn_maps
 
 
 # Argument parsing

@@ -2,26 +2,26 @@
 import torch
 import numpy as np
 from tqdm import tqdm
-from unsupervised_keypoints import ptp_utils
-from unsupervised_keypoints import sdxl_monkey_patch
-from unsupervised_keypoints import eval
+from stable_kp import ptp_utils
+from stable_kp import sdxl_monkey_patch
+from stable_kp import eval
 import torch.nn.functional as F
 import torch.distributions as dist
-from datasets.celeba import CelebA
-from datasets import custom_images
-from datasets import cub
-from datasets import cub_parts
-from datasets import taichi
-from datasets import human36m
-from datasets import unaligned_human36m
-from datasets import deepfashion
-from unsupervised_keypoints import optimize_token
+from .datasets.celeba import CelebA
+from .datasets import custom_images
+from .datasets import cub
+from .datasets import cub_parts
+from .datasets import taichi
+from .datasets import human36m
+from .datasets import unaligned_human36m
+from .datasets import deepfashion
+from stable_kp import optimize_token
 import torch.nn as nn
 
 # now import weights and biases
 import wandb
 
-from unsupervised_keypoints.invertable_transform import RandomAffineWithInverse
+from stable_kp.invertable_transform import RandomAffineWithInverse
 
 
 def collect_maps(

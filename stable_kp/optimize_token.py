@@ -15,7 +15,7 @@
 import torch
 from diffusers import StableDiffusionPipeline, DDIMScheduler
 import numpy as np
-from unsupervised_keypoints import ptp_utils
+from stable_kp import ptp_utils
 from PIL import Image
 import torch.nn.functional as F
 import torch.nn as nn

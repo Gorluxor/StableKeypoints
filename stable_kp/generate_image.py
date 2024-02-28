@@ -1,6 +1,6 @@
 import torch
 from diffusers import StableDiffusionPipeline, DDIMScheduler
-from unsupervised_keypoints import ptp_utils
+from stable_kp import ptp_utils
 
 device = "cuda"
 

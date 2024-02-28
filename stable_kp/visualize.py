@@ -4,20 +4,20 @@ import torch
 import numpy as np
 from glob import glob
 from tqdm import tqdm
-from unsupervised_keypoints import ptp_utils
+from stable_kp import ptp_utils
 import torch.nn.functional as F
-from datasets.celeba import CelebA
-from datasets import custom_images
-from datasets import cub
-from datasets import cub_parts
-from datasets import taichi
-from datasets import human36m
-from datasets import unaligned_human36m
-from datasets import deepfashion
-from unsupervised_keypoints.eval import run_image_with_context_augmented
-from unsupervised_keypoints.eval import pixel_from_weighted_avg, find_max_pixel, mask_radius, find_k_max_pixels
+from .datasets.celeba import CelebA
+from .datasets import custom_images
+from .datasets import cub
+from .datasets import cub_parts
+from .datasets import taichi
+from .datasets import human36m
+from .datasets import unaligned_human36m
+from .datasets import deepfashion
+from stable_kp.eval import run_image_with_context_augmented
+from stable_kp.eval import pixel_from_weighted_avg, find_max_pixel, mask_radius, find_k_max_pixels
 
-from unsupervised_keypoints.invertable_transform import RandomAffineWithInverse
+from stable_kp.invertable_transform import RandomAffineWithInverse
 
 import matplotlib.pyplot as plt
 

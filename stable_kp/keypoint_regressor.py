@@ -1,16 +1,16 @@
 import torch
 from tqdm import tqdm
-from unsupervised_keypoints import ptp_utils
-from datasets.celeba import CelebA
-from datasets import custom_images
-from datasets import cub
-from datasets import cub_parts
-from datasets import taichi
-from datasets import human36m
-from datasets import unaligned_human36m
-from datasets import deepfashion
-from unsupervised_keypoints.eval import pixel_from_weighted_avg, find_max_pixel
-from unsupervised_keypoints.eval import run_image_with_context_augmented
+from stable_kp import ptp_utils
+from .datasets.celeba import CelebA
+from .datasets import custom_images
+from .datasets import cub
+from .datasets import cub_parts
+from .datasets import taichi
+from .datasets import human36m
+from .datasets import unaligned_human36m
+from .datasets import deepfashion
+from stable_kp.eval import pixel_from_weighted_avg, find_max_pixel
+from stable_kp.eval import run_image_with_context_augmented
 
 
 @torch.no_grad()
@@ -267,7 +267,7 @@ def return_regressor(X, Y):
 
 def return_regressor_human36m(X, Y):
     
-    from unsupervised_keypoints.eval import swap_points
+    from stable_kp.eval import swap_points
     
     import numpy as np
     

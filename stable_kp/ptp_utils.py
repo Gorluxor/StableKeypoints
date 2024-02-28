@@ -19,14 +19,14 @@ from typing import Optional, Union, Tuple, List, Dict
 from tqdm.notebook import tqdm
 import torch.nn.functional as F
 import abc
-from unsupervised_keypoints.eval import find_max_pixel, find_k_max_pixels
-from unsupervised_keypoints import optimize_token
+from stable_kp.eval import find_max_pixel, find_k_max_pixels
+from stable_kp import optimize_token
 from torch.nn.parallel.data_parallel import DataParallel
 from collections import OrderedDict
 
 from PIL import Image
 
-from unsupervised_keypoints.optimize import collect_maps
+from stable_kp.optimize import collect_maps
 
 
 class AttentionControl(abc.ABC):
